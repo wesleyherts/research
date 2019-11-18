@@ -1,7 +1,5 @@
 from enum import Enum
 
-# from django.db.models import SmallIntegerField
-
 
 class CategoryPatientStatus:
     ALL_PATIENTS = 1
@@ -19,11 +17,11 @@ class EnumPatientStatus(Enum):
 
 
 # this shows that enums are only equal to themselves so you can't have a mistaken comparison
-print("Comparisons")
-print(CategoryPatientStatus.ALL_PATIENTS == OtherStatus.ONE)
-print(OtherStatus.ONE == EnumPatientStatus.ALL_PATIENTS)
-print(CategoryPatientStatus.ALL_PATIENTS == EnumPatientStatus.ALL_PATIENTS)
-print(EnumPatientStatus.ALL_PATIENTS == 1)
+### Comparisons ###
+print(CategoryPatientStatus.ALL_PATIENTS == OtherStatus.ONE)  # True
+print(OtherStatus.ONE == EnumPatientStatus.ALL_PATIENTS)  # False
+print(CategoryPatientStatus.ALL_PATIENTS == EnumPatientStatus.ALL_PATIENTS)  # False
+print(EnumPatientStatus.ALL_PATIENTS == 1)  # False
 
 # don't need a Choices map if you name values differently
 """
@@ -64,11 +62,12 @@ class ReviewSiteType(Enum):
     OTHER = "Other"
 
 
-# Usage:
-print("Choices Usage")
-print(ReviewSiteType.__members__.items())
-print(list(ReviewSiteType))
-print([(item.name, item.value) for item in ReviewSiteType])
+### Choices Usage ###
+print(ReviewSiteType.__members__.items())  # get list of tuples of enum items
+print(list(ReviewSiteType))  # get a list of enum items
+print(
+    [(item.name, item.value) for item in ReviewSiteType]
+)  # list of tuples identical to Choices
 
 
 # Using a custom Enum
@@ -90,5 +89,5 @@ class ForceReviewSiteType(ForceEnum):
     OTHER = "Other"
 
 
-print("Custom Enum")
-print(ForceReviewSiteType.choices())
+### Using a Custom Enum ###
+print(ForceReviewSiteType.choices())  # Identical to Choices as described originally
