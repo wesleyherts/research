@@ -82,5 +82,10 @@ class ForceReviewSiteType(ForceEnum):
 
 ### Usage ###
 print(ForceReviewSiteType.choices())
+# [('GOOGLE', 'Google'), ('HEALTHGRADES', 'Healthgrades'), ('OTHER', 'Other'), ('RATEMDS', 'RateMds'), ('UCOMPARE_HEALTHCARE', 'Ucompare Healthcare'), ('VITALS', 'Vitals'), ('WEBMD', 'WebMD'), ('YELP', 'Yelp'), ('ZOCDOC', 'Zocdoc')]
+
 print(ForceUserRole.choices())
+# [('NONE', (0, '----')), ('PATIENT', (1, 'Patient')), ('PROVIDER', (2, 'Provider')), ('EXECUTIVE', (3, 'Executive')), ('ADMIN', (99, 'Admin'))]
+
 print(ForceUserRole.map())
+# {0: '----', 1: 'Patient', 2: 'Provider', 3: 'Executive', 99: 'Admin'}
