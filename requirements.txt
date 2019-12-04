@@ -1,4 +1,4 @@
-Django==2.2.7
+django>=2.2.8
 django-enumfield==1.5
 measurement==3.0.0
 mpmath==1.1.0
