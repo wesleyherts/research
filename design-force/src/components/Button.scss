@@ -1,0 +1,11 @@
+@import './styles.scss';
+@import './colors.scss';
+
+.force-button {
+  background: $force-blue;
+  color: white;
+}
+
+.angry-button {
+  background: red;
+}
