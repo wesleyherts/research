@@ -3,5 +3,5 @@ django-enumfield==1.5
 measurement==3.0.0
 mpmath==1.1.0
 pytz==2019.3
-sqlparse==0.3.0
+sqlparse==0.4.4
 sympy==1.4
